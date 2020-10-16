@@ -25,12 +25,13 @@ int findDistance(string a, string b) {
     }
     return sum;
 }
-
+// Declaring the array out here will allow you to reference it later in other functions.
+string arr[59000];
 int dictionary() {
   ifstream inFile;
   inFile.open("dictionary.txt");
 
-  string arr[59000];
+  // string arr[59000];
 
   for(int i = 0; i != 58110; ++i){
   inFile >> arr[i];
@@ -46,6 +47,7 @@ int main() {
     cin >> x;
     cin >> y;
     cout << findDistance(x, y);
+    dictionary();
     
     return 0;
 }
